@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Your Name</h1>
+    <p>Frontend Developer</p>
+  </header>
+
+  <main>
+
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        I build small, focused front-end projects that explore interactivity,
+        layout, and clean structure using HTML, CSS, and JavaScript.
+      </p>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+
+        <!-- TEMPLATE PROJECT CARD -->
+        <article class="project-card">
+          <a href="https://github.com/yourusername/project-repo" target="_blank">
+            <img src="images/project-placeholder.jpg" alt="Project preview">
+          </a>
+
+          <div class="project-content">
+            <h3>Project Title</h3>
+            <button class="more-btn">More</button>
+
+            <p class="project-description hidden">
+              Short description of the project. Explain what it does,
+              what problem it solves, or what you explored while building it.
+            </p>
+          </div>
+        </article>
+        <!-- END TEMPLATE -->
+
+        <!-- Duplicate this card 3 more times for 4 projects total -->
+
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: your@email.com</p>
+      <p>GitHub: github.com/yourusername</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Your Name</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
