@@ -259,6 +259,23 @@ h2 {
   display: none;
 }
 
+.project-links {
+  width: 30%;
+  height: 40px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.project-links button {
+  font-family: "Ysabeau Infant";
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border-width: 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
 .contact p {
   margin-bottom: 0.4rem;
 }
