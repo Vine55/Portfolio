@@ -32,5 +32,5 @@ moreButtons.forEach(button => {
         })
       }
     }
-    else {banner.style.backgroundColor="#000707"}
+    else {banner.style.backgroundColor="rgba(0,7,7,0"}
   })

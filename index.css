@@ -93,6 +93,7 @@ body {
   display: flex;
   gap: 20px;
   align-items: center;
+  align-content: center;
 }
 
 .contact-icons {
@@ -294,13 +295,13 @@ a {
 
 /* Responsive */
 @media (max-width: 700px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
+    :root {
+    --logo: 4vh;
+    --icon-size: 3vh;
   }
 
-  .contact-icons {
-    width: 5vh;
-    height: 5vh;
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
   .nav-center {
@@ -308,6 +309,14 @@ a {
   }
 
   .banner {
-    background-color: rgba(0, 7, 7, 1);
+    background-color: rgba(0, 7, 7, 0);
+    border-width: 0;
+  }
+  .nav-bar {
+    height: 70%;
+  }
+
+  .site-header h1 {
+    font-size: 300%;
   }
 }
