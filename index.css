@@ -1,3 +1,8 @@
+:root {
+  --banner-height: 20vh;
+  --logo: 6vh;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,16 +11,71 @@
 }
 
 body {
-  background-color: #f5f6f8;
-  color: #222;
+  background-color: #080707;
+  color: #ffffff;
   line-height: 1.6;
+}
+
+.hero {
+  height: 100vh;
+  background-color: #000707;
+}
+
+.banner {
+  height: var(--banner-height);
+  width: 100%;
+  
+  top: 0;
+  left: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-bottom: #ffffff 1px solid;
+  display: flex;
+  position: fixed;
+  
+  z-index: 1000000;
+}
+
+.nav-bar {
+  height: 60%;
+  width: 90%;
+  border-radius: 100px;
+  border: #ffffff 1px solid;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+
+  background-color: rgba(0, 7, 7, 0);
+}
+
+.nav {
+  display: flex;
+}
+
+.logo-container {
+  width: var(--logo);
+  height: var(--logo);
+  background-color: #2563eb;
+}
+
+#filler {
+  height: var(--banner-height);
 }
 
 .site-header {
   text-align: center;
+
   padding: 3rem 1rem;
   background-color: #1f2933;
+
   color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -78,10 +138,14 @@ h2 {
 .project-description {
   margin-top: 0.8rem;
   font-size: 0.95rem;
+  height: fit-content;
+  transition: all 0.5 ease-out;
   color: #444;
 }
 
 .hidden {
+  height: 0px;
+  transition: all 0.5 ease-out;
   display: none;
 }
 
