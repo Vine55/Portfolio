@@ -1,4 +1,6 @@
 const moreButtons = document.querySelectorAll(".more-btn");
+banner = document.querySelector('.banner')
+cards = document.querySelectorAll('.project-card')
 
 moreButtons.forEach(button => {
   button.addEventListener("click", () => {
@@ -9,7 +11,22 @@ moreButtons.forEach(button => {
     }
     else {
       button.textContent='More'
-
+      
     }
   });
 });
+
+window.addEventListener('scroll', () => {
+  vh80 = window.innerHeight*0.8
+  vh150 = window.innerHeight*0.9
+  if (window.scrollY>vh80) {
+    banner.style.backgroundColor = "#000707"
+  } else {
+    banner.style.backgroundColor = "rgba(0,7,7,0)"
+  }
+  if (window.scrollY>vh150) {
+    cards.forEach(card => {
+      card.style.opacity = '1'
+    })
+  }
+})

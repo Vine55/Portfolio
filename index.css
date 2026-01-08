@@ -1,6 +1,10 @@
 :root {
   --banner-height: 20vh;
-  --logo: 6vh;
+  --logo: 10vh;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -18,7 +22,12 @@ body {
 
 .hero {
   height: 100vh;
-  background-color: #000707;
+  /* background-color: #000707; */
+  background: radial-gradient(
+  circle 300px at 90% 30%,
+  rgba(38, 105, 230, 0.8),
+  transparent
+);
 }
 
 .banner {
@@ -42,23 +51,52 @@ body {
 .nav-bar {
   height: 60%;
   width: 90%;
+
   border-radius: 100px;
   border: #ffffff 1px solid;
-  display: flex;
+  background-color: rgba(0, 7, 7, 0);
+
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
   padding: 0 5%;
-
-  background-color: rgba(0, 7, 7, 0);
 }
 
 .nav {
   display: flex;
 }
 
+.nav-left {justify-self: left;}
+
+.nav-center {
+  height: 100%;
+  background-color: #080707;
+  
+  justify-self: center;
+  
+  display: flex;
+  align-items: center;
+  gap: var(--logo);
+  padding: 0 10%;
+}
+
+.nav-item {
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-right {
+  justify-self:end;
+  display: flex;
+  align-items: center;
+
+}
+
 .logo-container {
   width: var(--logo);
   height: var(--logo);
-  background-color: #2563eb;
 }
 
 #filler {
@@ -69,13 +107,22 @@ body {
   text-align: center;
 
   padding: 3rem 1rem;
-  background-color: #1f2933;
+  background-color: rgba(31, 41, 51, 0);
 
   color: white;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 50vh;
 }
 
 main {
@@ -105,6 +152,10 @@ h2 {
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+  opacity: 0;
+
+  transition: all 1s ease-in;
 }
 
 .project-card img {
@@ -157,6 +208,10 @@ h2 {
   text-align: center;
   padding: 1.5rem;
   background-color: #1f2933;
+  color: white;
+}
+
+a {
   color: white;
 }
 
