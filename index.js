@@ -16,17 +16,21 @@ moreButtons.forEach(button => {
   });
 });
 
-window.addEventListener('scroll', () => {
-  vh80 = window.innerHeight*0.8
-  vh150 = window.innerHeight*0.9
-  if (window.scrollY>vh80 && window.innerWidth>700) {
-    banner.style.backgroundColor = "#000707"
-  }  else if (window.scrollY<vh80 && window.innerWidth>700) {
-    banner.style.backgroundColor = "rgba(0,7,7,0)"
-  }
-  if (window.scrollY>vh150) {
-    cards.forEach(card => {
-      card.style.opacity = '1'
-    })
-  }
-})
+
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth>700) {
+      vh80 = window.innerHeight*0.9
+      vh150 = window.innerHeight*0.9
+      if (window.scrollY>vh80) {
+        banner.style.backgroundColor = "#000707"
+      }  else if (window.scrollY<vh80) {
+        banner.style.backgroundColor = "rgba(0,7,7,0)"
+      }
+      if (window.scrollY>vh150) {
+        cards.forEach(card => {
+          card.style.opacity = '1'
+        })
+      }
+    }
+    else {banner.style.backgroundColor="#000707"}
+  })
