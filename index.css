@@ -289,4 +289,8 @@ a {
   .nav-center {
     display: none;
   }
+
+  .banner {
+    background-color: rgba(0, 7, 7, 1);
+  }
 }
