@@ -19,7 +19,7 @@ moreButtons.forEach(button => {
 window.addEventListener('scroll', () => {
   vh80 = window.innerHeight*0.8
   vh150 = window.innerHeight*0.9
-  if (window.scrollY>vh80 && window.innerWidth<700) {
+  if (window.scrollY>vh80 && window.innerWidth>700) {
     banner.style.backgroundColor = "#000707"
   } else {
     banner.style.backgroundColor = "rgba(0,7,7,0)"
