@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
   vh150 = window.innerHeight*0.9
   if (window.scrollY>vh80 && window.innerWidth>700) {
     banner.style.backgroundColor = "#000707"
-  } else {
+  }  else if (window.scrollY<vh80 && window.innerWidth>700) {
     banner.style.backgroundColor = "rgba(0,7,7,0)"
   }
   if (window.scrollY>vh150) {
